@@ -1,0 +1,31 @@
+/*eg. output:-
+enter the no. of rows to print:5
+    1
+   1 2
+  1 2 3
+ 1 2 3 4
+1 2 3 4 5
+*/
+#include<stdio.h>
+#include<conio.h>
+int main()
+{int n,i,j,k,x,y;
+    printf("enter the no. of rows to print:");//prints first line
+    scanf("%d",&n);//inputs n
+    y=n;//to store n in a variable so that in i loop value of n doesnot varry
+    for(i=1;i<=y;i++)//loop for rows
+    {x=n;//for no. of spaceing in begning of every row
+        for(k=n-1;k>=1;k--)//loop for spaces
+        {
+            printf(" ");//print spaces as shown in patern
+            x=x-1;//reduce no. of spaces in next line by 1
+        }
+        for(j=1;j<=i;j++)//loop for column and no.s to be printed
+        {
+            printf("%d ",j);//print no.s and space b/w the no.s of same row
+        }
+        printf("\n");//changes row
+        n=n-1;//reduces value of n by 1 so that in next line spaces reduces by one
+    }
+return 0;//void donot return anything
+}
